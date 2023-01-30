@@ -31,7 +31,7 @@ export const authFunc = () => {
         if (data.login && data.login === user.login && data.password && data.password === user.password) {
           login();
         } else {
-          alert('need');
+          alert('wrong login or password');
         }
       });
     }
@@ -67,7 +67,6 @@ export const authFunc = () => {
 
   logoutBtn.addEventListener('click', () => {
     localStorage.removeItem('auth');
-
     logout();
   });
 
