@@ -109,5 +109,19 @@
       "preview": "/images/usage/usage-1.jpg",
       "price": 7490
     }
+  ],
+  "cart": [
+    {
+      "id": 0,
+      "name": "Amazfit GTS 4 mini (черный)",
+      "count": 1,
+      "price": 4990
+    },
+    {
+      "id": 1,
+      "name": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
+      "count": 1,
+      "price": 290
+    }
   ]
 }

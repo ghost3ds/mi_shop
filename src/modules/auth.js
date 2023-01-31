@@ -41,12 +41,6 @@ export const authFunc = () => {
     openModal(modal);
   });
 
-  closeBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      closeModal(modal);
-    });
-  });
-
   loginBtn.addEventListener('click', () => {
     const loginInput = modal.querySelector('#login-control');
     const passwordInput = modal.querySelector('#password-control');
@@ -56,7 +50,7 @@ export const authFunc = () => {
       password: passwordInput.value,
     };
 
-    getData('http://localhost:3001/profile').then((data) => {
+    getData('/profile').then((data) => {
       if (data.login && data.login === user.login && data.password && data.password === user.password) {
         login();
       } else {
@@ -68,10 +62,6 @@ export const authFunc = () => {
   logoutBtn.addEventListener('click', () => {
     localStorage.removeItem('auth');
     logout();
-  });
-
-  openCartBtn.addEventListener('click', () => {
-    openModal(cartModal);
   });
 
   checkAuth();
