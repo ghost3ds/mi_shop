@@ -36,7 +36,7 @@ export const productsFunc = () => {
     const urlSearchParams = new URLSearchParams(params);
     const id = urlSearchParams.get('id');
     const url = id ? `/products?category=${id}` : `/products`;
-    console.log(url);
+
     getData(url)
       .then((data) => {
         render(data);
